@@ -1,46 +1,38 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using System.IO;
-using System.Threading.Tasks;
 
-internal class Program
+static void ConfigureServices(IServiceCollection services)
 {
-    public static async Task Main(string[] args)
+    // configure logging
+    services.AddLogging(builder =>
     {
-        // create service collection
-        var services = new ServiceCollection();
-        ConfigureServices(services);
+        builder.AddConsole();
+        builder.AddDebug();
+    });
 
-        // create service provider
-        var serviceProvider = services.BuildServiceProvider();
+    // build config
+    var configuration = new ConfigurationBuilder()
+        .SetBasePath(Directory.GetCurrentDirectory())
+        .AddJsonFile("appsettings.json", optional: false)
+        .AddEnvironmentVariables()
+        .Build();
 
-        // entry to run app
-        await serviceProvider.GetService<App>().Run(args);
-    }
+    services.Configure<AppSettings>(configuration.GetSection("App"));
 
-    private static void ConfigureServices(IServiceCollection services)
-    {
-        // configure logging
-        services.AddLogging(builder =>
-        {
-            builder.AddConsole();
-            builder.AddDebug();
-        });
+    // add services:
+    // services.AddTransient<IMyRespository, MyConcreteRepository>();
 
-        // build config
-        var configuration = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appsettings.json", optional: false)
-            .AddEnvironmentVariables()
-            .Build();
-
-        services.Configure<AppSettings>(configuration.GetSection("App"));
-
-        // add services:
-        // services.AddTransient<IMyRespository, MyConcreteRepository>();
-
-        // add app
-        services.AddTransient<App>();
-    }
+    // add app
+    services.AddTransient<App>();
 }
+
+// create service collection
+var services = new ServiceCollection();
+ConfigureServices(services);
+
+// create service provider
+using var serviceProvider = services.BuildServiceProvider();
+
+// entry to run app
+await serviceProvider.GetService<App>().Run(args);
