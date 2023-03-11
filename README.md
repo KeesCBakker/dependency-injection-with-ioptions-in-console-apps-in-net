@@ -6,3 +6,6 @@ This project contains the code of the article <a href="https://keestalkstech.com
 
 - Support for .NET 7
 - Support for <a href="https://learn.microsoft.com/en-us/dotnet/api/system.commandline.rootcommand">System.CommandLine.RootCommand</a>
+- Support for appsettings.json configuration
+- Support for environment variables configuration
+- Support for IOption injection
