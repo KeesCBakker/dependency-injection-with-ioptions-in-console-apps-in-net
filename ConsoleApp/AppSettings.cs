@@ -1,4 +1,4 @@
 ﻿public class AppSettings
 {
-    public string TempDirectory { get; set; }
+    public string Greeting { get; set; }
 }

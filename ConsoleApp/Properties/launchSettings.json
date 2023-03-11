@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Greet Kees": {
+      "commandName": "Project",
+      "commandLineArgs": "Kees"
+    },
+    "Help": {
+      "commandName": "Project",
+      "commandLineArgs": "--help"
+    }
+  }
+}
