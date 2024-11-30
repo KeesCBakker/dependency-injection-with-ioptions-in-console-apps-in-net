@@ -9,4 +9,4 @@ This project contains the code of the article <a href="https://keestalkstech.com
 - Support for appsettings.json configuration
 - Support for environment variables configuration
 - Support for IOption injection
-- Support for IOption data validation validation on startup
+- Support for IOption data validation on startup
