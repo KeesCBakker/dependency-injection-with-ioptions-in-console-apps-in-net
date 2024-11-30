@@ -1,31 +1,15 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
+﻿using Microsoft.Extensions.DependencyInjection;
 using MyCli.Commands;
 using MyCli.Services;
 using System.CommandLine;
 
 static void ConfigureServices(IServiceCollection services)
 {
-    // build config
-    var configuration = new ConfigurationBuilder()
-        .AddEnvironmentVariables()
-        .Build();
-
-    void Configure<TConfig>(string sectionName) where TConfig : class
-    {
-        services
-            .AddSingleton(p => p.GetRequiredService<IOptions<TConfig>>().Value)
-            .AddOptions<TConfig>()
-            .Bind(configuration.GetSection(sectionName));
-    }
-
-    // options
-    Configure<WeatherServiceOptions>(WeatherServiceOptions.SectionName);
-
     // add commands:
     services.AddTransient<Command, CurrentCommand>();
     services.AddTransient<Command, ForecastCommand>();
+
+    // add services:
     services.AddTransient<WeatherService>();
 }
 
@@ -37,9 +21,11 @@ ConfigureServices(services);
 using var serviceProvider = services.BuildServiceProvider();
 
 // entry to run app
-var commands = serviceProvider.GetServices<Command>();
 var rootCommand = new RootCommand("Weather information using a very unreliable weather service.");
-commands.ToList().ForEach(command => rootCommand.AddCommand(command));
+serviceProvider
+    .GetServices<Command>()
+    .ToList()
+    .ForEach(rootCommand.AddCommand);
 
 await rootCommand.InvokeAsync(args);
 

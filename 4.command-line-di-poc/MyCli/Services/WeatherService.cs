@@ -1,12 +1,12 @@
 ﻿namespace MyCli.Services;
 
-class WeatherService(WeatherServiceOptions options)
+class WeatherService()
 {
-    public WeatherServiceOptions Options => options;
+    public WeatherServiceOptions Options { get; } = new WeatherServiceOptions();
 
     public Task<string> GetTemperature(string? city = null)
     {
-        if (city == null) city = options.DefaultCity;
+        if (city == null) city = Options.DefaultCity;
 
         var report = $"In {city} it is now {Random.Shared.Next(-20, 40)} degrees celcius.";
         return Task.FromResult(report);
@@ -14,7 +14,7 @@ class WeatherService(WeatherServiceOptions options)
 
     public Task<string[]> Forecast(int days, string? city = null)
     {
-        if (city == null) city = options.DefaultCity;
+        if (city == null) city = Options.DefaultCity;
 
         var reports = new List<string>
         {
