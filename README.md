@@ -37,7 +37,7 @@ by default.
 - <a href="3.option-injection/README.md">README.md</a>
 - <a href="3.option-injection/Ktt.OptionsApi.sln">Ktt.OptionsApi.sln</a>
 
-## 4. .NET Console Application with injectable commands
+## 4. .NET Console Application with injectable commands (System.CommandLine preview)
 
 How to use `System.CommandLine` to build a CLI with commands and 
 dependency injection.
