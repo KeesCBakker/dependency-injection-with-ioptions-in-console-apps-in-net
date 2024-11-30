@@ -5,10 +5,10 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "dependency-injection-with-ioptions-in-console-apps\ConsoleApp\ConsoleApp.csproj", "{B6EE96EC-FBAB-4336-AEB5-4794A6FDB4DF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dependency-injection-with-ioptions-in-console-apps", "dependency-injection-with-ioptions-in-console-apps", "{A4E34F9E-31B1-4749-9F1E-3F0E3EEA4790}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.dependency-injection-with-ioptions-in-console-apps", "1.dependency-injection-with-ioptions-in-console-apps", "{A4E34F9E-31B1-4749-9F1E-3F0E3EEA4790}"
 	ProjectSection(SolutionItems) = preProject
-		dependency-injection-with-ioptions-in-console-apps\ConsoleApp.sln = dependency-injection-with-ioptions-in-console-apps\ConsoleApp.sln
 		dependency-injection-with-ioptions-in-console-apps\README.md = dependency-injection-with-ioptions-in-console-apps\README.md
+		dependency-injection-with-ioptions-in-console-apps\Ktt.ConsoleApp.sln = dependency-injection-with-ioptions-in-console-apps\Ktt.ConsoleApp.sln
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_meta", "_meta", "{0E816DC2-0BCE-4485-80D6-173EF9F7D1FF}"
@@ -18,11 +18,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_meta", "_meta", "{0E816DC2
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "simple-jwt-access-policies-for-api-security-in-net", "simple-jwt-access-policies-for-api-security-in-net", "{41BECB35-D39D-4C27-800E-E637A84FA5D8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.simple-jwt-access-policies-for-api-security-in-net", "2.simple-jwt-access-policies-for-api-security-in-net", "{41BECB35-D39D-4C27-800E-E637A84FA5D8}"
 	ProjectSection(SolutionItems) = preProject
 		simple-jwt-access-policies-for-api-security-in-net\generate_keys.sh = simple-jwt-access-policies-for-api-security-in-net\generate_keys.sh
-		simple-jwt-access-policies-for-api-security-in-net\JwtSecuredApi.sln = simple-jwt-access-policies-for-api-security-in-net\JwtSecuredApi.sln
 		simple-jwt-access-policies-for-api-security-in-net\README.md = simple-jwt-access-policies-for-api-security-in-net\README.md
+		simple-jwt-access-policies-for-api-security-in-net\Ktt.JwtSecuredApi.sln = simple-jwt-access-policies-for-api-security-in-net\Ktt.JwtSecuredApi.sln
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtSecuredApi", "simple-jwt-access-policies-for-api-security-in-net\JwtSecuredApi\JwtSecuredApi.csproj", "{F66CC65E-6597-4D5D-A83C-EE1B3D2CB927}"
