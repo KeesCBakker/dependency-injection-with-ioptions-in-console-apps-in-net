@@ -1,0 +1,6 @@
+@JwtSecuredApi_HostAddress = http://localhost:5193
+
+GET {{OptionsApi_HostAddress}}/swagger/
+Accept: application/json
+
+###
