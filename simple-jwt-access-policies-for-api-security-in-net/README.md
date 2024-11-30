@@ -1,4 +1,4 @@
-# Dependency injection (with IOptions) in Console Apps in .NET
+# Simple JWT Access Policies for API security in .NET
 
 Services can use their private key to communicate with our service.
 We can configure the access for each issuer using standard .NET claims.
