@@ -15,3 +15,14 @@ want the same features in your Console app.
 - <a href="dependency-injection-with-ioptions-in-console-apps/ConsoleApp.sln">ConsoleApp.sln</a>
 - <a href="https://keestalkstech.com/2018/04/dependency-injection-with-ioptions-in-console-apps-in-dotnet/">Dependency injection (with IOptions) in Console Apps in .NET</a>
 
+
+## 2. simple-jwt-access-policies-for-api-security-in-net
+
+Services can use their private key to communicate with our service.
+We can configure the access for each issuer using standard .NET claims.
+
+- <a href="simple-jwt-access-policies-for-api-security-in-net">dependency-injection-with-ioptions-in-console-apps</a>
+- <a href="simple-jwt-access-policies-for-api-security-in-net/README.md">README.md</a>
+- <a href="simple-jwt-access-policies-for-api-security-in-net/JwtSecuredApi.sln">JwtSecuredApi.sln</a>
+- <a href="https://keestalkstech.com/2024/11/simple-jwt-access-policies-for-api-security-in-net/">Simple JWT Access Policies for API security in .NET</a>
+
