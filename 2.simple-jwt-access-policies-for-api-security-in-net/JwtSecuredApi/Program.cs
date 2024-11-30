@@ -36,12 +36,17 @@ builder.Services.AddSwaggerGen(op =>
     });
 });
 
-builder.Services
-    .AddSingleton(p => p.GetRequiredService<IOptions<JwtOptions>>().Value)
-    .AddOptions<JwtOptions>()
-    .Bind(builder.Configuration.GetSection(JwtOptions.SectionName))
-    .ValidateDataAnnotations()
-    .ValidateOnStart();
+void Configure<TConfig>(string sectionName) where TConfig : class, new()
+{
+    builder.Services
+        .AddSingleton(p => p.GetRequiredService<IOptions<TConfig>>().Value)
+        .AddOptions<TConfig>()
+        .Bind(builder.Configuration.GetSection(sectionName))
+        .ValidateDataAnnotations()
+        .ValidateOnStart();
+}
+
+Configure<JwtOptions>(JwtOptions.SectionName);
 
 builder.Services.AddJwtAndAccessPolicies();
 

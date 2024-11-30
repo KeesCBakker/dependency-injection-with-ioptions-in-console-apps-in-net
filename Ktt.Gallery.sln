@@ -27,6 +27,22 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "1.dependency-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtSecuredApi", "2.simple-jwt-access-policies-for-api-security-in-net\JwtSecuredApi\JwtSecuredApi.csproj", "{29657CAF-5A81-4548-AB13-7A398126A0B8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.option-injection", "3.option-injection", "{60A625F9-1565-471D-B0FD-A7956735DF85}"
+	ProjectSection(SolutionItems) = preProject
+		3.option-injection\Ktt.OptionsApi.sln = 3.option-injection\Ktt.OptionsApi.sln
+		3.option-injection\README.md = 3.option-injection\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptionsApi", "3.option-injection\OptionsApi\OptionsApi.csproj", "{30D7B4C4-4C9C-4D51-B421-398A35DD3197}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.command-line-di-poc", "4.command-line-di-poc", "{6ED4C763-D516-4509-89E5-5D2F0DC2D3CC}"
+	ProjectSection(SolutionItems) = preProject
+		4.command-line-di-poc\README.md = 4.command-line-di-poc\README.md
+		4.command-line-di-poc\Ktt.MyCli.sln = 4.command-line-di-poc\Ktt.MyCli.sln
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCli", "4.command-line-di-poc\MyCli\MyCli.csproj", "{24ACA421-F404-4E48-AD8C-EF9A7B7A9CEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +57,14 @@ Global
 		{29657CAF-5A81-4548-AB13-7A398126A0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29657CAF-5A81-4548-AB13-7A398126A0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29657CAF-5A81-4548-AB13-7A398126A0B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30D7B4C4-4C9C-4D51-B421-398A35DD3197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30D7B4C4-4C9C-4D51-B421-398A35DD3197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30D7B4C4-4C9C-4D51-B421-398A35DD3197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30D7B4C4-4C9C-4D51-B421-398A35DD3197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24ACA421-F404-4E48-AD8C-EF9A7B7A9CEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24ACA421-F404-4E48-AD8C-EF9A7B7A9CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24ACA421-F404-4E48-AD8C-EF9A7B7A9CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24ACA421-F404-4E48-AD8C-EF9A7B7A9CEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +72,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{BF3A632C-45F6-473E-AD54-1E987F171EFD} = {A4E34F9E-31B1-4749-9F1E-3F0E3EEA4790}
 		{29657CAF-5A81-4548-AB13-7A398126A0B8} = {41BECB35-D39D-4C27-800E-E637A84FA5D8}
+		{30D7B4C4-4C9C-4D51-B421-398A35DD3197} = {60A625F9-1565-471D-B0FD-A7956735DF85}
+		{24ACA421-F404-4E48-AD8C-EF9A7B7A9CEE} = {6ED4C763-D516-4509-89E5-5D2F0DC2D3CC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8FE17B5E-340D-4FBA-8516-94794B1338C0}
