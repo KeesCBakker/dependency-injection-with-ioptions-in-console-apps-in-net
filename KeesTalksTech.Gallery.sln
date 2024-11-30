@@ -18,6 +18,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_meta", "_meta", "{0E816DC2
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "simple-jwt-access-policies-for-api-security-in-net", "simple-jwt-access-policies-for-api-security-in-net", "{41BECB35-D39D-4C27-800E-E637A84FA5D8}"
+	ProjectSection(SolutionItems) = preProject
+		simple-jwt-access-policies-for-api-security-in-net\JwtSecuredApi\JwtSecuredApi.csproj = simple-jwt-access-policies-for-api-security-in-net\JwtSecuredApi\JwtSecuredApi.csproj
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
