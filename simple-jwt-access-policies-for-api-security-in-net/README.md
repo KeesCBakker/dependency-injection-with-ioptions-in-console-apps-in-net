@@ -3,7 +3,7 @@
 Services can use their private key to communicate with our service.
 We can configure the access for each issuer using standard .NET claims.
 
-<a href="https://keestalkstech.com/2024/11/simple-jwt-access-policies-for-api-security-in-net/">Simple JWT Access Policies for API security in .NET</a>
+<a href="https://keestalkstech.com/2024/11/simple-jwt-access-policies-for-api-security-in-net/">Read the blog on KeesTalksTech: Simple JWT Access Policies for API security in .NET</a>
 
 ## Tokens
 
