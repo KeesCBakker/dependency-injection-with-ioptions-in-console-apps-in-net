@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using System.CommandLine;
 
 static void ConfigureServices(IServiceCollection services)
@@ -19,7 +20,17 @@ static void ConfigureServices(IServiceCollection services)
         .AddEnvironmentVariables()
         .Build();
 
-    services.Configure<AppSettings>(configuration.GetSection("App"));
+    void Configure<TConfig>(string sectionName) where TConfig : class
+    {
+        services
+            .AddSingleton(p => p.GetRequiredService<IOptions<TConfig>>().Value)
+            .AddOptions<TConfig>()
+            .Bind(configuration.GetSection(sectionName))
+            .ValidateDataAnnotations()
+            .ValidateOnStart();
+    }
+
+    Configure<AppOptions>(AppOptions.SectionName);
 
     // add services:
     // services.AddTransient<IMyRespository, MyConcreteRepository>();
@@ -36,4 +47,4 @@ ConfigureServices(services);
 using var serviceProvider = services.BuildServiceProvider();
 
 // entry to run app
-await serviceProvider.GetService<App>().InvokeAsync(args);
+await serviceProvider.GetRequiredService<App>().InvokeAsync(args);
