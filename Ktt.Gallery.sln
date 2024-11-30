@@ -3,12 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "dependency-injection-with-ioptions-in-console-apps\ConsoleApp\ConsoleApp.csproj", "{B6EE96EC-FBAB-4336-AEB5-4794A6FDB4DF}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.dependency-injection-with-ioptions-in-console-apps", "1.dependency-injection-with-ioptions-in-console-apps", "{A4E34F9E-31B1-4749-9F1E-3F0E3EEA4790}"
 	ProjectSection(SolutionItems) = preProject
-		dependency-injection-with-ioptions-in-console-apps\README.md = dependency-injection-with-ioptions-in-console-apps\README.md
-		dependency-injection-with-ioptions-in-console-apps\Ktt.ConsoleApp.sln = dependency-injection-with-ioptions-in-console-apps\Ktt.ConsoleApp.sln
+		1.dependency-injection-with-ioptions-in-console-apps\Ktt.ConsoleApp.sln = 1.dependency-injection-with-ioptions-in-console-apps\Ktt.ConsoleApp.sln
+		1.dependency-injection-with-ioptions-in-console-apps\README.md = 1.dependency-injection-with-ioptions-in-console-apps\README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_meta", "_meta", "{0E816DC2-0BCE-4485-80D6-173EF9F7D1FF}"
@@ -20,12 +18,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_meta", "_meta", "{0E816DC2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.simple-jwt-access-policies-for-api-security-in-net", "2.simple-jwt-access-policies-for-api-security-in-net", "{41BECB35-D39D-4C27-800E-E637A84FA5D8}"
 	ProjectSection(SolutionItems) = preProject
-		simple-jwt-access-policies-for-api-security-in-net\generate_keys.sh = simple-jwt-access-policies-for-api-security-in-net\generate_keys.sh
-		simple-jwt-access-policies-for-api-security-in-net\README.md = simple-jwt-access-policies-for-api-security-in-net\README.md
-		simple-jwt-access-policies-for-api-security-in-net\Ktt.JwtSecuredApi.sln = simple-jwt-access-policies-for-api-security-in-net\Ktt.JwtSecuredApi.sln
+		2.simple-jwt-access-policies-for-api-security-in-net\generate_keys.sh = 2.simple-jwt-access-policies-for-api-security-in-net\generate_keys.sh
+		2.simple-jwt-access-policies-for-api-security-in-net\Ktt.JwtSecuredApi.sln = 2.simple-jwt-access-policies-for-api-security-in-net\Ktt.JwtSecuredApi.sln
+		2.simple-jwt-access-policies-for-api-security-in-net\README.md = 2.simple-jwt-access-policies-for-api-security-in-net\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtSecuredApi", "simple-jwt-access-policies-for-api-security-in-net\JwtSecuredApi\JwtSecuredApi.csproj", "{F66CC65E-6597-4D5D-A83C-EE1B3D2CB927}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "1.dependency-injection-with-ioptions-in-console-apps\ConsoleApp\ConsoleApp.csproj", "{BF3A632C-45F6-473E-AD54-1E987F171EFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtSecuredApi", "2.simple-jwt-access-policies-for-api-security-in-net\JwtSecuredApi\JwtSecuredApi.csproj", "{29657CAF-5A81-4548-AB13-7A398126A0B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,21 +33,21 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B6EE96EC-FBAB-4336-AEB5-4794A6FDB4DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B6EE96EC-FBAB-4336-AEB5-4794A6FDB4DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B6EE96EC-FBAB-4336-AEB5-4794A6FDB4DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B6EE96EC-FBAB-4336-AEB5-4794A6FDB4DF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F66CC65E-6597-4D5D-A83C-EE1B3D2CB927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F66CC65E-6597-4D5D-A83C-EE1B3D2CB927}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F66CC65E-6597-4D5D-A83C-EE1B3D2CB927}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F66CC65E-6597-4D5D-A83C-EE1B3D2CB927}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF3A632C-45F6-473E-AD54-1E987F171EFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF3A632C-45F6-473E-AD54-1E987F171EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF3A632C-45F6-473E-AD54-1E987F171EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF3A632C-45F6-473E-AD54-1E987F171EFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29657CAF-5A81-4548-AB13-7A398126A0B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29657CAF-5A81-4548-AB13-7A398126A0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29657CAF-5A81-4548-AB13-7A398126A0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29657CAF-5A81-4548-AB13-7A398126A0B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{B6EE96EC-FBAB-4336-AEB5-4794A6FDB4DF} = {A4E34F9E-31B1-4749-9F1E-3F0E3EEA4790}
-		{F66CC65E-6597-4D5D-A83C-EE1B3D2CB927} = {41BECB35-D39D-4C27-800E-E637A84FA5D8}
+		{BF3A632C-45F6-473E-AD54-1E987F171EFD} = {A4E34F9E-31B1-4749-9F1E-3F0E3EEA4790}
+		{29657CAF-5A81-4548-AB13-7A398126A0B8} = {41BECB35-D39D-4C27-800E-E637A84FA5D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8FE17B5E-340D-4FBA-8516-94794B1338C0}
