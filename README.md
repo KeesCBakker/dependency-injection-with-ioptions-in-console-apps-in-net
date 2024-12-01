@@ -45,3 +45,13 @@ dependency injection.
 - <a href="4.command-line-di-poc">4.command-line-di-poc</a>
 - <a href="4.command-line-di-poc/README.md">README.md</a>
 - <a href="4.command-line-di-poc/Ktt.MyCli.sln">Ktt.MyCli.sln</a>
+
+## 5. Romand Numerals
+Parsing Romand Numerals in C# is a good way to explore
+(implicit) operator overloading.
+
+- <a href="5.roman-numerals">1.dependency-injection-with-ioptions-in-console-apps</a>
+- <a href="5.roman-numerals/README.md">README.md</a>
+- <a href="5.roman-numerals/Ktt.RomanNumerals.sln">Ktt.RomanNumerals.sln</a>
+- <a href="https://keestalkstech.com/2017/08/parsing-roman-numerals-using-csharp/">Parsing Roman Numerals using C##</a>
+- <a href="https://keestalkstech.com/2017/08/calculations-with-roman-numerals-in-csharp/">Calculations with Roman Numerals using C#</a>
