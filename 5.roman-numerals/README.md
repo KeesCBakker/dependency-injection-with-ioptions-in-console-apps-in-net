@@ -1,5 +1,5 @@
 # Roman Numerals
-Parsing Romand Numerals in C# is a good way to explore
+Parsing Roman Numerals in C# is a good way to explore
 (implicit) operator overloading.
 
 More information can be found in these blogs:
