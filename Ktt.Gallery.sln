@@ -53,6 +53,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeesTalksTech.Utilities.Rom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeesTalksTech.Utilities.Roman.Numerals", "5.roman-numerals\KeesTalksTech.Utilities.Roman.Numerals\KeesTalksTech.Utilities.Roman.Numerals.csproj", "{802D888C-7676-4B73-A4C6-6FD4AE5F0D26}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.handlebars", "6.handlebars", "{955F43E9-BB27-4FE0-9E46-10AEF31FCD38}"
+	ProjectSection(SolutionItems) = preProject
+		6.handlebars\Ktt.JsonHandlebars.sln = 6.handlebars\Ktt.JsonHandlebars.sln
+		6.handlebars\README.md = 6.handlebars\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ktt.JsonHandlebars", "6.handlebars\Ktt.JsonHandlebars\Ktt.JsonHandlebars.csproj", "{80CFEF3B-6901-44B8-8418-2E74BD104823}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ktt.JsonHandlebars.Test", "6.handlebars\Ktt.JsonHandlebars.Test\Ktt.JsonHandlebars.Test.csproj", "{8F88EB3C-FC9D-4123-9F78-67E77C8FE28E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +93,14 @@ Global
 		{802D888C-7676-4B73-A4C6-6FD4AE5F0D26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{802D888C-7676-4B73-A4C6-6FD4AE5F0D26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{802D888C-7676-4B73-A4C6-6FD4AE5F0D26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80CFEF3B-6901-44B8-8418-2E74BD104823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80CFEF3B-6901-44B8-8418-2E74BD104823}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80CFEF3B-6901-44B8-8418-2E74BD104823}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80CFEF3B-6901-44B8-8418-2E74BD104823}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F88EB3C-FC9D-4123-9F78-67E77C8FE28E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F88EB3C-FC9D-4123-9F78-67E77C8FE28E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F88EB3C-FC9D-4123-9F78-67E77C8FE28E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F88EB3C-FC9D-4123-9F78-67E77C8FE28E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,6 +112,8 @@ Global
 		{24ACA421-F404-4E48-AD8C-EF9A7B7A9CEE} = {6ED4C763-D516-4509-89E5-5D2F0DC2D3CC}
 		{D80E9C6C-90E4-4668-B0DE-4727349834C8} = {B81F0520-D208-486C-B538-9F18D5BBF540}
 		{802D888C-7676-4B73-A4C6-6FD4AE5F0D26} = {B81F0520-D208-486C-B538-9F18D5BBF540}
+		{80CFEF3B-6901-44B8-8418-2E74BD104823} = {955F43E9-BB27-4FE0-9E46-10AEF31FCD38}
+		{8F88EB3C-FC9D-4123-9F78-67E77C8FE28E} = {955F43E9-BB27-4FE0-9E46-10AEF31FCD38}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8FE17B5E-340D-4FBA-8516-94794B1338C0}
