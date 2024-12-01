@@ -49,36 +49,46 @@ public class ClassicRomanNumeralTests
     [Fact]
     public void RomanNumeral_Parse_ClassicNotation()
     {
-        Assert.Equivalent(1, RomanNumeral.Parse("I")?.Number);
-        Assert.Equivalent(2, RomanNumeral.Parse("II")?.Number);
-        Assert.Equivalent(3, RomanNumeral.Parse("III")?.Number);
-        Assert.Equivalent(4, RomanNumeral.Parse("IIII")?.Number);
-        Assert.Equivalent(5, RomanNumeral.Parse("V")?.Number);
-        Assert.Equivalent(6, RomanNumeral.Parse("VI")?.Number);
-        Assert.Equivalent(7, RomanNumeral.Parse("VII")?.Number);
-        Assert.Equivalent(8, RomanNumeral.Parse("VIII")?.Number);
-        Assert.Equivalent(9, RomanNumeral.Parse("VIIII")?.Number);
-        Assert.Equivalent(10, RomanNumeral.Parse("X")?.Number);
-        Assert.Equivalent(11, RomanNumeral.Parse("XI")?.Number);
+        Assert.Equivalent(1, RomanNumeral.Parse("I").Number);
+        Assert.Equivalent(2, RomanNumeral.Parse("II").Number);
+        Assert.Equivalent(3, RomanNumeral.Parse("III").Number);
+        Assert.Equivalent(4, RomanNumeral.Parse("IIII").Number);
+        Assert.Equivalent(5, RomanNumeral.Parse("V").Number);
+        Assert.Equivalent(6, RomanNumeral.Parse("VI").Number);
+        Assert.Equivalent(7, RomanNumeral.Parse("VII").Number);
+        Assert.Equivalent(8, RomanNumeral.Parse("VIII").Number);
+        Assert.Equivalent(9, RomanNumeral.Parse("VIIII").Number);
+        Assert.Equivalent(10, RomanNumeral.Parse("X").Number);
+        Assert.Equivalent(11, RomanNumeral.Parse("XI").Number);
 
-        Assert.Equivalent(1910, RomanNumeral.Parse("MDCCCCX")?.Number);
-        Assert.Equivalent(1910, RomanNumeral.Parse("MCMX")?.Number);
+        Assert.Equivalent(1910, RomanNumeral.Parse("MDCCCCX").Number);
+        Assert.Equivalent(1910, RomanNumeral.Parse("MCMX").Number);
 
-        Assert.Equivalent(118, RomanNumeral.Parse("CXVIII")?.Number);
-        Assert.Equivalent(118, RomanNumeral.Parse("CIIXX")?.Number);
-        Assert.Equivalent(118, RomanNumeral.Parse("CXIIX")?.Number);
+        Assert.Equivalent(118, RomanNumeral.Parse("CXVIII").Number);
+        Assert.Equivalent(118, RomanNumeral.Parse("CIIXX").Number);
+        Assert.Equivalent(118, RomanNumeral.Parse("CXIIX").Number);
 
-        Assert.Equivalent(119, RomanNumeral.Parse("CXVIIII")?.Number);
-        Assert.Equivalent(119, RomanNumeral.Parse("CXIX")?.Number);
+        Assert.Equivalent(119, RomanNumeral.Parse("CXVIIII").Number);
+        Assert.Equivalent(119, RomanNumeral.Parse("CXIX").Number);
 
-        Assert.Equivalent(0, RomanNumeral.Parse("NULLA")?.Number);
+        Assert.Equivalent(0, RomanNumeral.Parse("NULLA").Number);
+    }
+
+    [Fact]
+    public void RomanNumeral_Parse_SubtractiveNotation()
+    {
+        Assert.Equivalent(14, RomanNumeral.Parse("XIV").Number);
+        Assert.Equivalent(19, RomanNumeral.Parse("XIX").Number);
     }
 
     [Theory]
     [InlineData("IVL")] //invalid order
     public void RomanNumeral_Parse_InvalidClassicNotation(string name)
     {
-        var n = RomanNumeral.Parse(name);
-        Assert.Null(n);
+        var act = () => RomanNumeral.Parse(name);
+        var exception = Assert.Throws<InvalidCastException>(act);
+
+        //The thrown exception can be used for even more detailed assertions.
+        Assert.Equal("The string is not a valid Roman numeral.", exception.Message);
     }
 }

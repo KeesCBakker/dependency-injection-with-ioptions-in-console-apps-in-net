@@ -227,13 +227,13 @@ public class RomanNumeral
 
     public static string operator +(string r1, RomanNumeral r2)
     {
-        var r = Parse(r1)! + r2;
+        var r = Parse(r1) + r2;
         return r.ToString();
     }
 
     public static RomanNumeral operator +(RomanNumeral r1, string r2)
     {
-        return r1 + Parse(r2)!;
+        return r1 + Parse(r2);
     }
 
     public static RomanNumeral operator +(RomanNumeral r1, int r2)
@@ -256,7 +256,7 @@ public class RomanNumeral
 
     public static string operator -(string r1, RomanNumeral r2)
     {
-        var r = Parse(r1)! + r2;
+        var r = Parse(r1) - r2;
         return r.ToString();
     }
 
