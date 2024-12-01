@@ -6,11 +6,11 @@ public class RomanNumeral
 {
     #region Constants
 
-    //0
+    // 0, nothing, nada. The zero wasn't invented yet ;-)
     public const string NULLA = "NULLA";
 
     //values - a readonly dictionary where the numerals are the keys to values
-    public static readonly IReadOnlyDictionary<string, int> VALUES = new ReadOnlyDictionary<string, int>(new Dictionary<string, int>
+    public static readonly IReadOnlyDictionary<string, int> VALUES = new Dictionary<string, int>
     {
         {"I",       1 },
         {"IV",      4 },
@@ -34,7 +34,8 @@ public class RomanNumeral
         {"P",       400 },
         {"G",       400 },
         {"Q",       500 }
-    });
+    }
+    .AsReadOnly();
 
     //all the options that are used for parsing, in their order of value
     public static readonly string[] NUMERAL_OPTIONS =
@@ -133,15 +134,18 @@ public class RomanNumeral
 
     public static bool IsNumeral(string str)
     {
-        if (string.IsNullOrEmpty(str))
+        try
+        {
+            Parse(str);
+            return true;
+        }
+        catch
         {
             return false;
         }
-
-        return Parse(str) != null;
     }
 
-    public static RomanNumeral? Parse(string? str, RomanNumeralNotation notation = RomanNumeralNotation.Substractive)
+    public static RomanNumeral Parse(string? str)
     {
         if (string.IsNullOrEmpty(str))
         {
@@ -212,7 +216,7 @@ public class RomanNumeral
         }
 
         //string is invalid
-        return null;
+        throw new InvalidCastException("The string is not a valid Roman numeral.");
     }
 
     public static int operator +(int r1, RomanNumeral r2)
@@ -283,7 +287,7 @@ public class RomanNumeral
         return new RomanNumeral(r);
     }
 
-    public static implicit operator RomanNumeral?(string r)
+    public static implicit operator RomanNumeral(string r)
     {
         return Parse(r);
     }

@@ -1,17 +1,27 @@
 ﻿namespace KeesTalksTech.Utilities.Roman.Numerals.Test;
 
-public class Example
+public class VariousTests
 {
     [Fact]
-    public void TesT()
+    public void Blog()
     {
-        RomanNumeral I = "I"!;
-        RomanNumeral IV = "IV"!;
+        Assert.Equivalent(1910, RomanNumeral.Parse("MDCCCCX").Number);
+        Assert.Equivalent(1910, RomanNumeral.Parse("MCMX").Number);
+
+        Assert.Equivalent("CXVIIII", new RomanNumeral(119).ToString(RomanNumeralNotation.Additive));
+        Assert.Equivalent("CXIX", new RomanNumeral(119).ToString());
+    }
+
+    [Fact]
+    public void Example()
+    {
+        RomanNumeral I = "I";
+        RomanNumeral IV = "IV";
 
         int a = IV - 1;
         int b = 4 - I;
-        int c = IV - "I"!;
-        int d = (RomanNumeral) "IV"! - I;
+        int c = IV - "I";
+        int d = (RomanNumeral) "IV" - I;
         int e = IV - I;
 
         Assert.Equivalent(3, a);
@@ -21,7 +31,7 @@ public class Example
         Assert.Equivalent(3, e);
 
         string f = IV - 1;
-        string g = 4 - I;
+        string g = (RomanNumeral) 4 - I;
         string h = IV - "I";
         string i = "IV" - I;
         string j = IV - I;
