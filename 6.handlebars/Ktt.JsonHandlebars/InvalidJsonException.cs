@@ -3,21 +3,16 @@
 namespace Ktt.JsonHandlebars;
 
 [Serializable]
-public class InvalidJsonException : Exception
+public partial class InvalidJsonException(Exception ex, string jsonText) : Exception(ParseMessage(ex, jsonText), ex)
 {
-    public string JsonText { get; }
-
-    public InvalidJsonException(Exception ex, string jsonText) : base(ParseMessage(ex, jsonText), ex)
-    {
-        JsonText = jsonText;
-    }
+    public string JsonText { get; } = jsonText;
 
     public static string ParseMessage(Exception ex, string json, int linesAbove = 3, int linesUnder = 2)
     {
         var message = ex.Message;
 
         //Example: After parsing a value an unexpected character was encountered: ". Path 'title', line 4, position 4.
-        var match = Regex.Match(message, @"line (?<line>\d+), position (?<position>\d+)");
+        var match = LinePositionRegex().Match(message);
 
         if (match.Success)
         {
@@ -41,4 +36,7 @@ public class InvalidJsonException : Exception
 
         return message;
     }
+
+    [GeneratedRegex(@"line (?<line>\d+), position (?<position>\d+)")]
+    private static partial Regex LinePositionRegex();
 }

@@ -13,7 +13,6 @@ public class JsonTemplateGenerator : IJsonTemplateGenerator
         Handlebars = HandlebarsDotNet.Handlebars.Create();
         Handlebars.Configuration.TextEncoder = new JsonTextEncoder();
         Handlebars.Configuration.ObjectDescriptorProviders.Add(new FlaggedEnumObjectDescriptorProvider());
-
     }
 
     public HandlebarsTemplate<object, object> Compile(string template) => Handlebars.Compile(template);
