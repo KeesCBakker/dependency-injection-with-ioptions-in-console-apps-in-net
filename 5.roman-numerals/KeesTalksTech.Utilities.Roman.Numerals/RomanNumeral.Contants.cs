@@ -33,21 +33,4 @@ public partial class RomanNumeral
     }
     .AsReadOnly();
 
-    //all the options that are used for parsing, in their order of value
-    public static readonly string[] NUMERAL_OPTIONS =
-    {
-        "M", "CM", "D", "Q", "CD", "P", "G", "C", "XC", "L", "F", "XL", "IIXX", "XIIX", "O", "X", "IX", "V", "IV", "I"
-    };
-
-    //subtractive notation uses these numerals
-    public static readonly string[] SUBTRACTIVE_NOTATION =
-    {
-        "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"
-    };
-
-    //the addative notation uses these numerals
-    public static readonly string[] ADDITIVE_NOTATION =
-    {
-        "M", "D", "C", "L", "X", "V", "I"
-    };
 }

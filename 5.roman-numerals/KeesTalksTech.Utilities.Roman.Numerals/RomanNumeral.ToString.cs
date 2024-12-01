@@ -2,6 +2,18 @@
 
 public partial class RomanNumeral
 {
+    //subtractive notation uses these numerals
+    public static readonly string[] SUBTRACTIVE_NOTATION =
+    {
+        "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"
+    };
+
+    //the addative notation uses these numerals
+    public static readonly string[] ADDITIVE_NOTATION =
+    {
+        "M", "D", "C", "L", "X", "V", "I"
+    };
+
     public override string ToString()
     {
         return ToString(Notation);

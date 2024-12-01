@@ -2,18 +2,11 @@
 
 public partial class RomanNumeral
 {
-    public static bool IsNumeral(string str)
+    //all the options that are used for parsing, in their order of value
+    public static readonly string[] NUMERAL_OPTIONS =
     {
-        try
-        {
-            Parse(str);
-            return true;
-        }
-        catch
-        {
-            return false;
-        }
-    }
+        "M", "CM", "D", "Q", "CD", "P", "G", "C", "XC", "L", "F", "XL", "IIXX", "XIIX", "O", "X", "IX", "V", "IV", "I"
+    };
 
     public static RomanNumeral Parse(string? str)
     {
@@ -87,5 +80,18 @@ public partial class RomanNumeral
 
         //string is invalid
         throw new InvalidCastException("The string is not a valid Roman numeral.");
+    }
+
+    public static bool IsNumeral(string str)
+    {
+        try
+        {
+            Parse(str);
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
     }
 }
