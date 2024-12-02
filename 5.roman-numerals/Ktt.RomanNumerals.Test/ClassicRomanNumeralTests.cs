@@ -1,4 +1,4 @@
-﻿namespace KeesTalksTech.Utilities.Roman.Numerals.Test;
+﻿namespace Ktt.RomanNumerals.Test;
 
 public class ClassicRomanNumeralTests
 {

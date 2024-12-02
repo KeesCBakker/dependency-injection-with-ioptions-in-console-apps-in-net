@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.dependency-injection-with-ioptions-in-console-apps", "1.dependency-injection-with-ioptions-in-console-apps", "{A4E34F9E-31B1-4749-9F1E-3F0E3EEA4790}"
 	ProjectSection(SolutionItems) = preProject
-		1.dependency-injection-with-ioptions-in-console-apps\Ktt.ConsoleApp.sln = 1.dependency-injection-with-ioptions-in-console-apps\Ktt.ConsoleApp.sln
+		1.dependency-injection-with-ioptions-in-console-apps\Ktt.ConsoleAppDependencyInjection.sln = 1.dependency-injection-with-ioptions-in-console-apps\Ktt.ConsoleAppDependencyInjection.sln
 		1.dependency-injection-with-ioptions-in-console-apps\README.md = 1.dependency-injection-with-ioptions-in-console-apps\README.md
 	EndProjectSection
 EndProject
@@ -23,9 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.simple-jwt-access-policie
 		2.simple-jwt-access-policies-for-api-security-in-net\README.md = 2.simple-jwt-access-policies-for-api-security-in-net\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "1.dependency-injection-with-ioptions-in-console-apps\ConsoleApp\ConsoleApp.csproj", "{BF3A632C-45F6-473E-AD54-1E987F171EFD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtSecuredApi", "2.simple-jwt-access-policies-for-api-security-in-net\JwtSecuredApi\JwtSecuredApi.csproj", "{29657CAF-5A81-4548-AB13-7A398126A0B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ktt.ConsoleAppDependencyInjection", "1.dependency-injection-with-ioptions-in-console-apps\ConsoleApp\Ktt.ConsoleAppDependencyInjection.csproj", "{BF3A632C-45F6-473E-AD54-1E987F171EFD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.option-injection", "3.option-injection", "{60A625F9-1565-471D-B0FD-A7956735DF85}"
 	ProjectSection(SolutionItems) = preProject
@@ -33,7 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.option-injection", "3.opt
 		3.option-injection\README.md = 3.option-injection\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptionsApi", "3.option-injection\OptionsApi\OptionsApi.csproj", "{30D7B4C4-4C9C-4D51-B421-398A35DD3197}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OptionsApi", "3.option-injection\OptionsApi\OptionsApi.csproj", "{30D7B4C4-4C9C-4D51-B421-398A35DD3197}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.command-line-di-poc", "4.command-line-di-poc", "{6ED4C763-D516-4509-89E5-5D2F0DC2D3CC}"
 	ProjectSection(SolutionItems) = preProject
@@ -41,7 +39,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.command-line-di-poc", "4.
 		4.command-line-di-poc\README.md = 4.command-line-di-poc\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCli", "4.command-line-di-poc\MyCli\MyCli.csproj", "{24ACA421-F404-4E48-AD8C-EF9A7B7A9CEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCli", "4.command-line-di-poc\MyCli\MyCli.csproj", "{24ACA421-F404-4E48-AD8C-EF9A7B7A9CEE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.roman-numerals", "5.roman-numerals", "{B81F0520-D208-486C-B538-9F18D5BBF540}"
 	ProjectSection(SolutionItems) = preProject
@@ -49,9 +47,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.roman-numerals", "5.roman
 		5.roman-numerals\README.md = 5.roman-numerals\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeesTalksTech.Utilities.Roman.Numerals.Test", "5.roman-numerals\KeesTalksTech.Utilities.Roman.Numerals.Test\KeesTalksTech.Utilities.Roman.Numerals.Test.csproj", "{D80E9C6C-90E4-4668-B0DE-4727349834C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeesTalksTech.Utilities.Roman.Numerals.Test", "5.roman-numerals\KeesTalksTech.Utilities.Roman.Numerals.Test\KeesTalksTech.Utilities.Roman.Numerals.Test.csproj", "{D80E9C6C-90E4-4668-B0DE-4727349834C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeesTalksTech.Utilities.Roman.Numerals", "5.roman-numerals\KeesTalksTech.Utilities.Roman.Numerals\KeesTalksTech.Utilities.Roman.Numerals.csproj", "{802D888C-7676-4B73-A4C6-6FD4AE5F0D26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeesTalksTech.Utilities.Roman.Numerals", "5.roman-numerals\KeesTalksTech.Utilities.Roman.Numerals\KeesTalksTech.Utilities.Roman.Numerals.csproj", "{802D888C-7676-4B73-A4C6-6FD4AE5F0D26}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.handlebars", "6.handlebars", "{955F43E9-BB27-4FE0-9E46-10AEF31FCD38}"
 	ProjectSection(SolutionItems) = preProject
@@ -59,9 +57,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.handlebars", "6.handlebar
 		6.handlebars\README.md = 6.handlebars\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ktt.JsonHandlebars", "6.handlebars\Ktt.JsonHandlebars\Ktt.JsonHandlebars.csproj", "{80CFEF3B-6901-44B8-8418-2E74BD104823}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ktt.JsonHandlebars", "6.handlebars\Ktt.JsonHandlebars\Ktt.JsonHandlebars.csproj", "{80CFEF3B-6901-44B8-8418-2E74BD104823}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ktt.JsonHandlebars.Test", "6.handlebars\Ktt.JsonHandlebars.Test\Ktt.JsonHandlebars.Test.csproj", "{8F88EB3C-FC9D-4123-9F78-67E77C8FE28E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ktt.JsonHandlebars.Test", "6.handlebars\Ktt.JsonHandlebars.Test\Ktt.JsonHandlebars.Test.csproj", "{8F88EB3C-FC9D-4123-9F78-67E77C8FE28E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,10 +71,6 @@ Global
 		{BF3A632C-45F6-473E-AD54-1E987F171EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF3A632C-45F6-473E-AD54-1E987F171EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF3A632C-45F6-473E-AD54-1E987F171EFD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{29657CAF-5A81-4548-AB13-7A398126A0B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{29657CAF-5A81-4548-AB13-7A398126A0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{29657CAF-5A81-4548-AB13-7A398126A0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{29657CAF-5A81-4548-AB13-7A398126A0B8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{30D7B4C4-4C9C-4D51-B421-398A35DD3197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{30D7B4C4-4C9C-4D51-B421-398A35DD3197}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30D7B4C4-4C9C-4D51-B421-398A35DD3197}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -107,7 +101,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BF3A632C-45F6-473E-AD54-1E987F171EFD} = {A4E34F9E-31B1-4749-9F1E-3F0E3EEA4790}
-		{29657CAF-5A81-4548-AB13-7A398126A0B8} = {41BECB35-D39D-4C27-800E-E637A84FA5D8}
 		{30D7B4C4-4C9C-4D51-B421-398A35DD3197} = {60A625F9-1565-471D-B0FD-A7956735DF85}
 		{24ACA421-F404-4E48-AD8C-EF9A7B7A9CEE} = {6ED4C763-D516-4509-89E5-5D2F0DC2D3CC}
 		{D80E9C6C-90E4-4668-B0DE-4727349834C8} = {B81F0520-D208-486C-B538-9F18D5BBF540}

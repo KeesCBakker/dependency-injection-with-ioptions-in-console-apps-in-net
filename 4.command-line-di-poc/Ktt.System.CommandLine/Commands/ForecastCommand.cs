@@ -1,7 +1,7 @@
-﻿using MyCli.Services;
+﻿using Ktt.System.CommandLine.Services;
 using System.CommandLine;
 
-namespace MyCli.Commands;
+namespace Ktt.System.CommandLine.Commands;
 
 class ForecastCommand : Command
 {

@@ -1,4 +1,4 @@
-﻿namespace KeesTalksTech.Utilities.Roman.Numerals;
+﻿namespace Ktt.RomanNumerals;
 
 public partial class RomanNumeral
 {

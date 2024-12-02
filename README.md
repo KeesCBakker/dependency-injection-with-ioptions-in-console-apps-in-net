@@ -12,7 +12,7 @@ want the same features in your Console app.
 
 - <a href="1.dependency-injection-with-ioptions-in-console-apps">1.dependency-injection-with-ioptions-in-console-apps</a>
 - <a href="1.dependency-injection-with-ioptions-in-console-apps/README.md">README.md</a>
-- <a href="1.dependency-injection-with-ioptions-in-console-apps/ConsoleApp.sln">ConsoleApp.sln</a>
+- <a href="1.dependency-injection-with-ioptions-in-console-apps/Ktt.ConsoleAppDependencyInjection.sln">Ktt.ConsoleAppDependencyInjection.sln</a>
 - <a href="https://keestalkstech.com/2018/04/dependency-injection-with-ioptions-in-console-apps-in-dotnet/">Dependency injection (with IOptions) in Console Apps in .NET</a>
 
 

@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KeesTalksTech.Utilities.Roman.Numerals\KeesTalksTech.Utilities.Roman.Numerals.csproj" />
+    <ProjectReference Include="..\Ktt.RomanNumerals\Ktt.RomanNumerals.csproj" />
   </ItemGroup>
 
   <ItemGroup>

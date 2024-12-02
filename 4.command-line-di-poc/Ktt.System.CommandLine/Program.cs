@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using MyCli.Commands;
-using MyCli.Services;
+﻿using Ktt.System.CommandLine.Commands;
+using Ktt.System.CommandLine.Services;
+using Microsoft.Extensions.DependencyInjection;
 using System.CommandLine;
 
 static void ConfigureServices(IServiceCollection services)

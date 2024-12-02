@@ -1,4 +1,4 @@
-﻿namespace MyCli.Services;
+﻿namespace Ktt.System.CommandLine.Services;
 
 class WeatherService()
 {
