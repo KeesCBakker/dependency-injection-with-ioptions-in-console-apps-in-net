@@ -11,8 +11,6 @@ JSON file and accessed through DI (``IOptions<T>``). It's only logical to
 want the same features in your Console app.
 
 - <a href="1.dependency-injection-with-ioptions-in-console-apps">1.dependency-injection-with-ioptions-in-console-apps</a>
-- <a href="1.dependency-injection-with-ioptions-in-console-apps/README.md">README.md</a>
-- <a href="1.dependency-injection-with-ioptions-in-console-apps/Ktt.ConsoleAppDependencyInjection.sln">Ktt.ConsoleAppDependencyInjection.sln</a>
 - <a href="https://keestalkstech.com/2018/04/dependency-injection-with-ioptions-in-console-apps-in-dotnet/">Dependency injection (with IOptions) in Console Apps in .NET</a>
 
 
@@ -22,8 +20,6 @@ Services can use their private key to communicate with our service.
 We can configure the access for each issuer using standard .NET claims.
 
 - <a href="2.simple-jwt-access-policies-for-api-security-in-net">2.simple-jwt-access-policies-for-api-security-in-net</a>
-- <a href="2.simple-jwt-access-policies-for-api-security-in-net/README.md">README.md</a>
-- <a href="2.simple-jwt-access-policies-for-api-security-in-net/JwtSecuredApi.sln">JwtSecuredApi.sln</a>
 - <a href="https://keestalkstech.com/2024/11/simple-jwt-access-policies-for-api-security-in-net/">Simple JWT Access Policies for API security in .NET</a>
 
 ## 3. Options Injection
@@ -34,8 +30,6 @@ project shows how to use a `Dictionary<string, string>` and a
 by default.
 
 - <a href="3.option-injection">3.option-injection</a>
-- <a href="3.option-injection/README.md">README.md</a>
-- <a href="3.option-injection/Ktt.OptionsApi.sln">Ktt.OptionsApi.sln</a>
 
 ## 4. .NET Console Application with injectable commands (System.CommandLine preview)
 
@@ -43,16 +37,12 @@ How to use `System.CommandLine` to build a CLI with commands and
 dependency injection.
 
 - <a href="4.command-line-di-poc">4.command-line-di-poc</a>
-- <a href="4.command-line-di-poc/README.md">README.md</a>
-- <a href="4.command-line-di-poc/Ktt.MyCli.sln">Ktt.MyCli.sln</a>
 
 ## 5. Roman Numerals
 Parsing Roman Numerals in C# is a good way to explore
 (implicit) operator overloading.
 
 - <a href="5.roman-numerals">5.roman-numerals</a>
-- <a href="5.roman-numerals/README.md">README.md</a>
-- <a href="5.roman-numerals/Ktt.RomanNumerals.sln">Ktt.RomanNumerals.sln</a>
 - <a href="https://keestalkstech.com/2017/08/parsing-roman-numerals-using-csharp/">Parsing Roman Numerals using C#</a>
 - <a href="https://keestalkstech.com/2017/08/calculations-with-roman-numerals-in-csharp/">Calculations with Roman Numerals using C#</a>
 
@@ -65,7 +55,5 @@ show how to instruct Handlebars to parse into JSON and add some nice error messa
 if your template fails.
 
 - <a href="6.handlebars">6.handlebars</a>
-- <a href="6.handlebars/README.md">README.md</a>
-- <a href="6.handlebars/Ktt.JsonHandlebars.sln">Ktt.JsonHandlebars.sln</a>
 - <a href="https://keestalkstech.com/2022/09/handlebars-net-json-templates/">Handlebars.Net & JSON templates</a>
 - <a href="https://keestalkstech.com/2022/09/handlebars-net-fun-with-flags/">Handlebars.Net: Fun with [Flags]</a>
