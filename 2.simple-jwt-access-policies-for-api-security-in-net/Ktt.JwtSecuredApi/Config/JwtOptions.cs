@@ -8,7 +8,7 @@ public class JwtOptions
     public string ValidAudience { get; set; } = string.Empty;
 
     [MinLength(1)]
-    public Dictionary<string, string> TrustedServices { get; } = new();
+    public Dictionary<string, string> TrustedServices { get; } = [];
 
-    public Dictionary<string, string[]> AccessPolicies { get; } = new();
+    public Dictionary<string, string[]> AccessPolicies { get; } = [];
 }

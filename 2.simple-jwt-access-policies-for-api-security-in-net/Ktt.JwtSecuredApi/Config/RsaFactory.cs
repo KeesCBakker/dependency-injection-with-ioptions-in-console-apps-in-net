@@ -33,7 +33,8 @@ public class RsaFactory : IDisposable
         foreach (var key in _keys.Values)
         {
             key.Dispose();
-            _keys.Clear();
         }
+
+        _keys.Clear();
     }
 }
