@@ -8,7 +8,7 @@ public class RsaFactory : IDisposable
 
     public RsaFactory(JwtOptions jwtOptions)
     {
-        var trustedServices = jwtOptions.TrustedServices;
+        var trustedServices = jwtOptions.GetTrustedServices();
         if (trustedServices.Count == 0)
         {
             throw new InvalidOperationException("TrustedServices section is missing or empty in configuration.");
@@ -17,8 +17,16 @@ public class RsaFactory : IDisposable
         foreach (var service in trustedServices.Keys)
         {
             var publicKeyPem = trustedServices[service];
+
             var rsa = RSA.Create();
-            rsa.ImportFromPem(publicKeyPem);
+            try
+            {
+                rsa.ImportFromPem(publicKeyPem);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"TrustedServices key with {service} cannot import the PEM.", ex);
+            }
             _keys.TryAdd(service, rsa);
         }
     }
