@@ -13,19 +13,9 @@ read -p "Enter the name of the service (lower-kebab-case): " SERVICE_NAME
 echo 
 echo "Generating key..."
 
-# Variables
-PRIVATE_KEY_FILE="private_key.pem"
-PUBLIC_KEY_FILE="public_key.pem"
-
-# Generate RSA private key
-openssl genpkey -algorithm RSA -out $PRIVATE_KEY_FILE -pkeyopt rsa_keygen_bits:2048
-
-# Extract public key
-openssl rsa -pubout -in $PRIVATE_KEY_FILE -out $PUBLIC_KEY_FILE
-
-# Read keys
-PRIVATE_KEY=$(cat $PRIVATE_KEY_FILE)
-PUBLIC_KEY=$(cat $PUBLIC_KEY_FILE)
+# Generate RSA private key and public key in memory
+PRIVATE_KEY=$(openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:2048)
+PUBLIC_KEY=$(echo "$PRIVATE_KEY" | openssl rsa -pubout)
 
 # Encode keys with \n
 PRIVATE_KEY_ENCODED=$(echo "$PRIVATE_KEY" | sed ':a;N;$!ba;s/\n/\\n/g')
@@ -37,7 +27,6 @@ echo "Private Key:"
 echo "$PRIVATE_KEY_ENCODED"
 echo
 
-# Output public key in JSON format
 echo "Public Key:"
 echo "\"$SERVICE_NAME\": \"$PUBLIC_KEY_ENCODED\""
 echo
@@ -72,8 +61,8 @@ EOF
     # Create unsigned token
     UNSIGNED_TOKEN="$HEADER_BASE64.$PAYLOAD_BASE64"
 
-    # Sign the token
-    SIGNATURE=$(echo -n "$UNSIGNED_TOKEN" | openssl dgst -sha256 -sign $PRIVATE_KEY_FILE | openssl base64 -e -A | tr '+/' '-_' | tr -d '=')
+    # Sign the token using the private key in memory
+    SIGNATURE=$(echo -n "$UNSIGNED_TOKEN" | openssl dgst -sha256 -sign <(echo "$PRIVATE_KEY") | openssl base64 -e -A | tr '+/' '-_' | tr -d '=')
 
     # Combine header, payload, and signature to form the JWT
     JWT="$UNSIGNED_TOKEN.$SIGNATURE"
@@ -87,6 +76,3 @@ EOF
     echo "JWT Payload:"
     echo "$PAYLOAD"
 fi
-
-# Cleanup
-rm -f $PRIVATE_KEY_FILE $PUBLIC_KEY_FILE
