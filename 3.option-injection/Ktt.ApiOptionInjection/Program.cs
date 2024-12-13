@@ -13,12 +13,10 @@ void Configure<TConfig>(string sectionName) where TConfig : class, new()
 }
 
 // Add config to the container.
-
 Configure<SourceOptions>(SourceOptions.SectionName);
-Configure<SupportedLanguageOptions>(SourceOptions.SectionName);
+Configure<SupportedLanguageOptions>(SupportedLanguageOptions.SectionName);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
