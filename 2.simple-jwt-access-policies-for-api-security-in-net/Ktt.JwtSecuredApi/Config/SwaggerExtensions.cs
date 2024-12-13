@@ -38,12 +38,8 @@ public static class SwaggerExtensions
              var assembly = Assembly.GetExecutingAssembly();
              var resourceName = "Ktt.JwtSecuredApi.README.md";
 
-             string markdownContent;
-             using (var stream = assembly.GetManifestResourceStream(resourceName))
-             using (var reader = new StreamReader(stream!))
-             {
-                 markdownContent = reader.ReadToEnd();
-             }
+             using StreamReader reader = new(assembly.GetManifestResourceStream(resourceName)!);
+             string markdownContent = reader.ReadToEnd();
 
              // Extract the first line as title and remaining content as description
              var lines = markdownContent.Split('\n', 2, StringSplitOptions.RemoveEmptyEntries);
