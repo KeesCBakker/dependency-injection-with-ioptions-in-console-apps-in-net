@@ -21,6 +21,8 @@ void Configure<TConfig>(string sectionName) where TConfig : class, new()
 Configure<JwtOptions>(JwtOptions.SectionName);
 
 builder.Services.AddJwtAndAccessPolicies();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddTransient<IUserNameAccessor, UserNameAccessor>();
 
 var app = builder.Build();
 
