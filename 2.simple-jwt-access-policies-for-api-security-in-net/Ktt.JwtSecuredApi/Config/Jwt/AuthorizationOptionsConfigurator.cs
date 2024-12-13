@@ -36,4 +36,3 @@ public class AuthorizationOptionsConfigurator(JwtOptions jwtOptions) : IPostConf
         }
     }
 }
-    

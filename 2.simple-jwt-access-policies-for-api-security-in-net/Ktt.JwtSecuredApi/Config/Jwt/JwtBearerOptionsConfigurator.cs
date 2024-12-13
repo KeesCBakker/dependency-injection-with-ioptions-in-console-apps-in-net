@@ -4,7 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 
 public class JwtBearerOptionsConfigurator(JwtOptions jwtOptions, RsaFactory rsaFactory) : IPostConfigureOptions<JwtBearerOptions>
 {
-    public void PostConfigure(string name, JwtBearerOptions options)
+    public void PostConfigure(string? name, JwtBearerOptions options)
     {
         var trustedServices = jwtOptions.GetTrustedServices();
         if (trustedServices.Count == 0)
