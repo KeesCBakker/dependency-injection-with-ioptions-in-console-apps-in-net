@@ -12,10 +12,8 @@ void Configure<TConfig>(string sectionName) where TConfig : class, new()
 {
     builder.Services
         .AddSingleton(p => p.GetRequiredService<IOptions<TConfig>>().Value)
-        .AddOptions<TConfig>()
-        .Bind(builder.Configuration.GetSection(sectionName))
-        .ValidateDataAnnotations()
-        .ValidateOnStart();
+        .AddOptionsWithValidateOnStart<TConfig>()
+        .BindConfiguration(sectionName);
 }
 
 Configure<JwtOptions>(JwtOptions.SectionName);

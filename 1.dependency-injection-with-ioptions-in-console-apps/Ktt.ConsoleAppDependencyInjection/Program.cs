@@ -14,20 +14,19 @@ static void ConfigureServices(IServiceCollection services)
     });
 
     // build config
-    var configuration = new ConfigurationBuilder()
-        .SetBasePath(Directory.GetCurrentDirectory())
-        .AddJsonFile("appsettings.json", optional: false)
-        .AddEnvironmentVariables()
-        .Build();
+    services.AddSingleton<IConfiguration>(_ => 
+        new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json", optional: false)
+            .AddEnvironmentVariables()
+            .Build());
 
     void Configure<TConfig>(string sectionName) where TConfig : class
     {
         services
             .AddSingleton(p => p.GetRequiredService<IOptions<TConfig>>().Value)
-            .AddOptions<TConfig>()
-            .Bind(configuration.GetSection(sectionName))
-            .ValidateDataAnnotations()
-            .ValidateOnStart();
+            .AddOptionsWithValidateOnStart<TConfig>()
+            .BindConfiguration(sectionName);
     }
 
     Configure<AppOptions>(AppOptions.SectionName);
