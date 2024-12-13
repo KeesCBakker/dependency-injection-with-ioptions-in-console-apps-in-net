@@ -1,25 +1,11 @@
 ﻿using Microsoft.Extensions.Logging;
-using System.CommandLine;
 
-public class App: RootCommand
+public class App(ILogger<App> _logger, AppOptions _options)
 {
-    private readonly ILogger<App> _logger;
-    private readonly AppOptions _options;
-
-    public App(AppOptions options, ILogger<App> logger):
-        base("Sends a nice greeting to the user.")
+    public async Task Execute(string[] args)
     {
-        _logger = logger;
-        _options = options;
+        var name = args.Length == 0 ? "World" : args[0];
 
-        var nameArgument = new Argument<string>("name", "The name of the person to greet.");
-        AddArgument(nameArgument);
-
-        this.SetHandler(Execute, nameArgument);
-    }
-
-    private async Task Execute(string name)
-    {
         _logger.LogInformation("Starting...");
         var greeting = string.Format(_options.Greeting, name);
         _logger.LogDebug($"Greeting: {greeting}");

@@ -2,7 +2,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using System.CommandLine;
 
 static void ConfigureServices(IServiceCollection services)
 {
@@ -46,4 +45,4 @@ ConfigureServices(services);
 using var serviceProvider = services.BuildServiceProvider();
 
 // entry to run app
-await serviceProvider.GetRequiredService<App>().InvokeAsync(args);
+await serviceProvider.GetRequiredService<App>().Execute(args);

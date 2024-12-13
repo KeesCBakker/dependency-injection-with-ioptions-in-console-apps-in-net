@@ -4,9 +4,8 @@
       "commandName": "Project",
       "commandLineArgs": "Kees"
     },
-    "Help": {
-      "commandName": "Project",
-      "commandLineArgs": "--help"
+    "Greet World": {
+      "commandName": "Project"
     }
   }
 }
