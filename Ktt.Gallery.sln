@@ -63,6 +63,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ktt.RomanNumerals.Test", "5
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ktt.System.CommandLine", "4.command-line-di-poc\Ktt.System.CommandLine\Ktt.System.CommandLine.csproj", "{5C4D77BF-FE1B-49A2-9039-4754C42621CF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "8.bypass-company-wallpaper", "8.bypass-company-wallpaper", "{5B0089D0-71C0-498F-AFEE-19EFA38B16D4}"
+	ProjectSection(SolutionItems) = preProject
+		8.bypass-company-wallpaper\ChangeWallpaper.ps1 = 8.bypass-company-wallpaper\ChangeWallpaper.ps1
+		8.bypass-company-wallpaper\Init.ps1 = 8.bypass-company-wallpaper\Init.ps1
+		8.bypass-company-wallpaper\README.md = 8.bypass-company-wallpaper\README.md
+		8.bypass-company-wallpaper\SetupTask.ps1 = 8.bypass-company-wallpaper\SetupTask.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
