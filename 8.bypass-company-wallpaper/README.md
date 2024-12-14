@@ -13,3 +13,15 @@ The code is a companion of the blog <a href="https://keestalkstech.com/2024/12/h
 
 Execute `./Init.ps1` to set things up. It will install the `./ChangeWallpaper.ps1` and
 setup a refresh task.
+
+## Checkout only this project
+
+Do the following:
+
+```sh
+git clone --no-checkout https://github.com/KeesCBakker/keestalkstech-dotnet-gallery.git
+cd keestalkstech-dotnet-gallery
+git sparse-checkout init
+git sparse-checkout set --no-cone 8.bypass-company-wallpaper
+git checkout main
+```
