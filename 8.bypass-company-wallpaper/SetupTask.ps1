@@ -1,5 +1,4 @@
 & {
-
     $TaskName = "ChangeWallpaperOnLogin"
     $PicturesFolder = [Environment]::GetFolderPath('MyPictures')
     $ScriptPath = "$PicturesFolder\ChangeWallpaper.ps1"  # Path to the wallpaper-changing script
@@ -10,7 +9,7 @@
     $isAdmin = [Security.Principal.WindowsIdentity]::GetCurrent().Groups -contains 'S-1-5-32-544'
     if (-not $isAdmin) {
         Write-Output "This script must be run as an administrator. Please restart it with administrative privileges."
-        return
+        exit 1
     }
 
     # Check if the task already exists
